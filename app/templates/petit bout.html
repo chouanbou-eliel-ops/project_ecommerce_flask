@@ -1,0 +1,8 @@
+affichage des produits
+<h1> Nos produits /h1
+    {% for product in produts%}
+    div
+        h3 {{ products.name}}
+        p {{product.price}}
+        <a href="/product/{{product.id}}">voir</a>
+    {% endfor %}

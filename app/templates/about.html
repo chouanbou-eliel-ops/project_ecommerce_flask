@@ -1,0 +1,254 @@
+{% extends "Base.html" %}
+
+{% block title %}À propos{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'CSS/about.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <h1 class="about-title">À propos de nous</h1>
+        <p class="about-subtitle">Découvrez notre histoire, notre équipe</p>
+    </div>
+
+    <!-- Introduction Section -->
+    <section class="about-intro">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Qui sommes-nous ?</h2>
+                <p>
+                    Bienvenue sur notre plateforme e-commerce développée par l'équipe 5 de LSI-2.
+                    Nous sommes un groupe d'étudiants passionnés par le développement web et 
+                    le commerce, dédiés à créer des solutions innovantes et
+                    accessibles à l'ensemble de l'ENSPY.
+                </p>
+                <p>
+                    Notre projet vise à offrir une expérience d'achat en ligne fluide, 
+                    intuitive et sécurisée, tout en mettant en pratique nos compétences 
+                    en développement full-stack avec Flask, Python et les technologies web modernes.
+                </p>
+            </div>
+            <div class="intro-image">
+                <div class="image-placeholder">
+                    <svg width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <h2 class="section-title">Notre Mission</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3>Innovation</h3>
+                <p>
+                    Développer des solutions technologiques innovantes qui répondent 
+                    aux besoins actuels du commerce en ligne dans notre etablissement.
+                </p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Qualité</h3>
+                <p>
+                    Garantir une expérience utilisateur exceptionnelle avec un code 
+                    propre, performant et maintenable.
+                </p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Accessibilité</h3>
+                <p>
+                    Rendre le commerce en ligne accessible à tous avec une interface 
+                    intuitive et facile à utiliser.
+                </p>
+            </div>
+
+            <div class="mission-card">
+                <div class="mission-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>Sécurité</h3>
+                <p>
+                    Assurer la protection des données personnelles et des transactions 
+                    avec les meilleures pratiques de sécurité (En etude).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">2026</div>
+                <div class="stat-label">Année de création</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Produits disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">80+</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support disponible</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <h2 class="section-title">Nos Valeurs</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="value-number">01</div>
+                <h3>Transparence</h3>
+                <p>
+                    Nous croyons en une communication ouverte et honnête avec nos clients 
+                    et partenaires. Chaque action que nous entreprenons est guidée par 
+                    l'intégrité et la clarté.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">02</div>
+                <h3>Excellence</h3>
+                <p>
+                    Nous visons l'excellence dans tout ce que nous faisons, de la conception 
+                    à la livraison. Notre engagement envers la qualité est inébranlable.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">03</div>
+                <h3>Collaboration</h3>
+                <p>
+                    Le travail d'équipe est au cœur de notre réussite. Nous valorisons 
+                    la diversité des idées et encourageons la collaboration à tous les niveaux.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-number">04</div>
+                <h3>Innovation Continue</h3>
+                <p>
+                    Nous restons à l'avant-garde des technologies et des tendances pour 
+                    offrir des solutions toujours plus performantes et adaptées en nous
+                    inspirant desplus grandes structure.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2 class="section-title">Notre Équipe</h2>
+        <p class="team-description">
+            Rencontrez les talents derrière ce projet en LSI-2, une équipe diversifiée et passionnée
+            qui travaille ensemble pour créer des expériences exceptionnelles.
+        </p>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Équipe Frontend</h3>
+                <p class="member-role">Design & Interface</p>
+                <p class="member-description">
+                    Responsable de l'expérience utilisateur et du design de l'interface.
+                </p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Équipe Backend</h3>
+                <p class="member-role">Développement & API</p>
+                <p class="member-description">
+                    Gère la logique serveur, les bases de données et les API.
+                </p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Équipe Design</h3>
+                <p class="member-role">Créativité & Branding</p>
+                <p class="member-description">
+                    Crée l'identité visuelle et les éléments graphiques du projet.
+                </p>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Équipe QA</h3>
+                <p class="member-role">Tests & Qualité</p>
+                <p class="member-description">
+                    Assure la qualité et la fiabilité de toutes les fonctionnalités.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Prêt à commencer ?</h2>
+        <p>Découvrez nos produits et rejoignez notre communauté de clients satisfaits.</p>
+        <div class="cta-buttons">
+            <a href="{{url_for('main.products')}}" class="cta-btn primary">Voir nos produits</a>
+            <a href="{{url_for('main.contact')}}" class="cta-btn secondary">Nous contacter</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

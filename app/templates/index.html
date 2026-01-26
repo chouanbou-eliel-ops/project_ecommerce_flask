@@ -1,0 +1,72 @@
+
+{% extends "Base.html" %}
+
+
+{% block title %}Accueil | LSI-2{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'CSS/Accueil.css')}}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO / VITRINE -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Bienvenue sur LSI-2</h1>
+        <p>
+            Découvrez une sélection de produits fiables, modernes
+            et accessibles, pensés pour simplifier votre quotidien.
+        </p>
+        <a href="{{ url_for('main.products') }}" class="hero-btn">
+            Découvrir les produits
+        </a>
+    </div>
+</section>
+
+
+<!-- PRODUITS POPULAIRES -->
+<section class="home-products">
+    <h2>Produits populaires</h2>
+
+    <div class="products-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <img
+                src=""
+                alt="{{ product.name }}"
+            >
+
+            <h3>{{ product.name }}</h3>
+            <p class="product-price">{{ product.price }} FCFA</p>
+
+            <a href="{{ url_for('main.product', product_id=product.id) }}"
+               class="product-link">
+                Voir le produit
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- VALEURS / CONFIANCE -->
+<section class="home-values">
+    <div class="value">
+        <h3>Livraison rapide</h3>
+        <p>Recevez vos commandes dans les meilleurs délais.</p>
+    </div>
+
+    <div class="value">
+        <h3>Paiement sécurisé</h3>
+        <p>Transactions protégées et fiables.</p>
+    </div>
+
+    <div class="value">
+        <h3>Service client</h3>
+        <p>Une équipe à votre écoute 7j/7.</p>
+    </div>
+</section>
+
+
+
+{% endblock %}
